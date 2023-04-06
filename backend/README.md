@@ -8,7 +8,7 @@ It happens to use [Spring Web on Reactive Stack](https://docs.spring.io/spring-f
 
     ./gradlew build
 
-##  Run
+##  Run Locally
 
     ./gradlew bootrun
 
