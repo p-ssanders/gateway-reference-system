@@ -7,9 +7,9 @@ Often, these systems are deployed with monolithic topology, where a single deplo
 As always, there are tradeoffs with the monolithic topology, particularly when compared to the distributed or microservice topology.
 
 This repository contains source code for three applications:
-1.  backend API
-1.  frontend UI
-1.  gateway
+1.  [Backend API](backend/README.md)
+1.  [Frontend UI](frontend/README.md)
+1.  [Gateway](gateway/README.md)
 
 The gateway will be used to solve the problems related to deploying the frontend separately from the backend, while highlighting the benefits of the distributed toplogy over monolithic.
 
