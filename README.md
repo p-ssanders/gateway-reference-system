@@ -1,4 +1,4 @@
-#   Path to Production Exercise
+#   Gateway Reference Implementation
 
 Many systems consist of a "backend" which provides data storage and lookup via API, and a "frontend" which allows a human user to interact with the backend.
 
