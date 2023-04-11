@@ -19,6 +19,7 @@ This path to production is the equivalent of a "hello world" app, in that it's t
 -   Publish images to public OCI image registry, like DockerHub, locally
 -   Provision/access a cluster on a cloud provider that is considered the production environment
 -   Manually apply YAML to deploy containers on the cluster (i.e.: `kubectl apply`)
+-   Manually provision services (e.g.: PostgreSQL) and inject connection information to containers
 -   Access the app for smoke tests
 
 Note all the decisions that are made along the way for a single pass along a very simple path to production:
@@ -33,6 +34,9 @@ Note all the decisions that are made along the way for a single pass along a ver
     -   Did you add additional behavior? Why?
     -   How did you get access to the cluster?
 -   How did you apply the YAML?
+-   How did you deploy services?
+-   How did you provide the service connection information to the app?
+    -   Did you manage secrets securely?
 -   How did you access the app?
     -   What was required to get this working?
 
