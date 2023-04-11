@@ -2,7 +2,9 @@
 
 This application is a Spring Boot "backend" that exposes an HTTP/JSON API.
 
-It happens to use [Spring Web on Reactive Stack](https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html), but it doesn't really matter.
+The API is simple: you can create a `TestData`, you can read a `TestData`, and you can get the count of `TestData`s.
+
+The data can be stored in H2 or PostgreSQL.
 
 ##  Build
 
@@ -10,8 +12,11 @@ It happens to use [Spring Web on Reactive Stack](https://docs.spring.io/spring-f
 
 ##  Run Locally
 
-    ./gradlew bootrun
+    docker run --name postgres -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=ptp -e POSTGRES_USER=ptp -e POSTGRES_PASSWORD=ptp -v $HOME/postgresql-data:/var/lib/postgresql/data -p 5432:5432 -d postgres
+    SPRING_PROFILES_ACTIVE=local java -jar build/libs/gateway-demo-backend-0.0.1-SNAPSHOT.jar
 
 ##  Explore API
 
-    http://localhost:8081/api/something
+    GET http://localhost:8081/
+    POST http://localhost:8081/
+    GET http://localhost:8081/1234
