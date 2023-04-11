@@ -29,19 +29,19 @@ Note all the decisions that are made along the way for a single pass along a ver
 
 ##  The Scalable Path to Production
 
-You did such a great job with the prior exercise, your organization promoted you to Chief Cloud Officer (CCO). You're now responsible for the migration of all your organizations' workloads to the kubernetes platform. Congratulations!
+You did such a great job with the prior exercise, your organization promoted you to Chief Cloud Officer (CCO). You're now accountable for the migration of all your organizations' workloads to the kubernetes platform. Congratulations!
 
 How do you ensure the path to production scales to support an organization of 100 software development teams?
 
-Likely, you need to provide teams with automation triggered by commits to their source code repositories:
+Likely, you need to provide teams with _automation_. For example:
 
--   Monitor source code repository for changes
--   Test source code
--   Scan source code
--   Transform application source code into OCI
--   Scan image
--   Generate workload manifests
--   Push the workload manifests to a GitOps repository
--   Apply the workload manifests to the "production" environment
--   Register ingress routes and DNS for the application
--   Provision TLS certificates for the route
+1.  Monitor source code repository for changes
+1.  Test source code and store results somewhere
+1.  Scan source code and store results somewhere
+1.  Transform application source code into an OCI image
+1.  Scan the image and store results somewhere
+1.  Generate kubernetes manifests that enforce organizational standards
+1.  Push the kubernetes manifests to a GitOps repository
+1.  Apply the kubernetes manifests to the "production" environment from the GitOps repository
+1.  Register ingress routes and DNS for the application
+1.  Provision TLS certificates for the route
