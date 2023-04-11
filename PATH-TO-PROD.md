@@ -3,10 +3,45 @@
 Given the topology of this reference artifact, what would the path to production look like?
 
 ##  The "Hello World" Path to Production
+
+This path to production is the equivalent of a "hello world" app, in that it's the most simple set of steps a developer can take to transform their source code into a running application that can be accessed by users.
+
 -   Produce OCI images from source code locally
 -   Publish images to public OCI image registry, like DockerHub, locally
--   Provision/access a cluster on a cloud provider
--   Manually apply YAML to deploy containers on the cluster (i.e.: kubectl apply)
+-   Provision/access a cluster on a cloud provider that is considered the production environment
+-   Manually apply YAML to deploy containers on the cluster (i.e.: `kubectl apply`)
 -   Access the app for smoke tests
 
-Note all the decisions that are made along the way for a single pass along a very simple path to production.
+Note all the decisions that are made along the way for a single pass along a very simple path to production:
+-   How did you produce an OCI image?
+    -   Dockerfile? What's in it? Why?
+    -   Buildpacks? Which ones? Why?
+-   How did you push the image to the image registry? Did you use Dockerhub?
+    -   Did you tag the image?
+-   How did you provision a cluster?
+    -   Which cloud? Why?
+    -   What behavior does the cluster have out of the box?
+    -   Did you add additional behavior? Why?
+    -   How did you get access to the cluster?
+-   How did you apply the YAML?
+-   How did you access the app?
+    -   What was required to get this working?
+
+##  The Scalable Path to Production
+
+You did such a great job with the prior exercise, your organization promoted you to Chief Cloud Officer (CCO). You're now responsible for the migration of all your organizations' workloads to the kubernetes platform. Congratulations!
+
+How do you ensure the path to production scales to support an organization of 100 software development teams?
+
+Likely, you need to provide teams with automation triggered by commits to their source code repositories:
+
+-   Monitor source code repository for changes
+-   Test source code
+-   Scan source code
+-   Transform application source code into OCI
+-   Scan image
+-   Generate workload manifests
+-   Push the workload manifests to a GitOps repository
+-   Apply the workload manifests to the "production" environment
+-   Register ingress routes and DNS for the application
+-   Provision TLS certificates for the route

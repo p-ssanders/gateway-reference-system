@@ -14,4 +14,3 @@ This repository contains source code for three applications:
 The gateway solves problems related to deploying the frontend separately from the backend, while highlighting the benefits of the distributed toplogy over monolithic. For example:
 -   The gateway can act as a proxy, so the backend and frontend applications can be deployed to a secured network that is not exposed to the "edge" (the Internet)
 -   The gateway can present both applications from a single domain, obviating the need for CORS configuration
-
