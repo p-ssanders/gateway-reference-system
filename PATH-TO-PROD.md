@@ -58,3 +58,4 @@ Likely, you need to provide teams with _automation_. For example:
 1.  Apply the kubernetes manifests to the "production" environment from the GitOps repository
 1.  Register ingress routes and DNS for the application
 1.  Provision TLS certificates for the route
+1.  Provision services for the application
