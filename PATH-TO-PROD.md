@@ -16,7 +16,7 @@ See the [FAQ](FAQ.md) for answers to frequently asked questions.
 This path to production is the equivalent of a "hello world" app, in that it's the most simple set of steps a developer can take to transform their source code into a running application that can be accessed by users.
 
 -   Produce OCI images from source code locally
--   Publish images to public OCI image registry, like DockerHub, locally
+-   Publish images to OCI image registry like DockerHub
 -   Provision/access a cluster on a cloud provider that is considered the production environment
 -   Manually apply YAML to deploy containers on the cluster (i.e.: `kubectl apply`)
 -   Manually provision services (e.g.: PostgreSQL) and inject connection information to containers
