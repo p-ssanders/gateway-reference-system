@@ -13,7 +13,7 @@ The data can be stored in H2 or PostgreSQL.
 ##  Run Locally
 
     docker run --name postgres -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=ptp -e POSTGRES_USER=ptp -e POSTGRES_PASSWORD=ptp -v $HOME/postgresql-data:/var/lib/postgresql/data -p 5432:5432 -d postgres
-    SPRING_PROFILES_ACTIVE=local java -jar build/libs/gateway-demo-backend-0.0.1-SNAPSHOT.jar
+    SPRING_PROFILES_ACTIVE=local ./gradlew bootrun
 
 ##  Explore API
 
