@@ -17,3 +17,11 @@ This allows for a deployment topology where only this application is exposed, an
 Run the frontend, and backend applications locally.
 
 Browse to the gateway URL: http://localhost:8080/
+
+##  Build Image
+
+    ./mvnw spring-boot:build-image
+
+##  Run Image
+
+    docker run --env SYSTEM_HOSTNAME=host.docker.internal -p 8080:8080 gateway:0.0.1-SNAPSHOT

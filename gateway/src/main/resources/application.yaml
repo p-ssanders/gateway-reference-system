@@ -3,13 +3,13 @@ spring:
     gateway:
       routes:
       - id: backend
-        uri: http://localhost:8081
+        uri: http://${SYSTEM_HOSTNAME:localhost}:8081
         predicates:
         - Path=/api/**
         filters:
         - RewritePath=/api/?(?<segment>.*), /$\{segment}
       - id: frontend
-        uri: http://localhost:4173
+        uri: http://${SYSTEM_HOSTNAME:localhost}:4173
         predicates:
         - Path=/**
 management:

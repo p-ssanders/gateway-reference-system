@@ -20,3 +20,11 @@ The data can be stored in H2 or PostgreSQL.
     GET http://localhost:8081/api
     POST http://localhost:8081/api
     GET http://localhost:8081/api/1234
+
+##  Build Image
+
+    ./gradlew bootbuildimage
+
+##  Run Image
+
+    docker run -p 8081:8081 backend:0.0.1-SNAPSHOT --server.port=8081
