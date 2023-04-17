@@ -17,6 +17,6 @@ The data can be stored in H2 or PostgreSQL.
 
 ##  Explore API
 
-    GET http://localhost:8081/
-    POST http://localhost:8081/
-    GET http://localhost:8081/1234
+    GET http://localhost:8081/api
+    POST http://localhost:8081/api
+    GET http://localhost:8081/api/1234
