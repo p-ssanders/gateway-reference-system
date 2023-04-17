@@ -9,8 +9,6 @@ Implement a simple "Hello World" path to production, after which you will be exp
 
 For an additional challenge, there is a "Scalable" path to production you can implement.
 
-See the [FAQ](FAQ.md) for answers to frequently asked questions.
-
 ##  The "Hello World" Path to Production
 
 This path to production is the equivalent of a "hello world" app, in that it's the most simple set of steps a developer can take to transform their source code into a running application that can be accessed by users.
