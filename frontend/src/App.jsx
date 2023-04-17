@@ -1,36 +1,56 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import axios from 'axios';
 
 function App() {
-  const [fromServer, setFromServer] = useState(0);
-  const getFromServer = function() {
-    axios.get('/api/something')
+  const [data, setData] = useState('(no data yet)');
+  const [dataId, setDataId] = useState('(no data id yet)');
+  const [dataCount, setDataCount] = useState(0);
+
+  const createData = function() {
+    axios.post('/api/')
     .then(function (response) {
-      setFromServer(response.data.value);
+      const path = '/api' + new URL(response.headers.location).pathname;
+      getData(path);
     })
     .catch(function (error) {
       console.log(error);
-    })
-    .finally(function () {
     });
-  }
+  };
+
+  const getData = function(location) {
+    axios.get(location)
+    .then(function (response) {
+      setData(response.data.data);
+      setDataId(response.data.id);
+      updateDataCount();
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  };
+
+  const updateDataCount = function() {
+    axios.get('/api')
+    .then(function (response) {
+      setDataCount(response.data.count);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  };
+
 
   return (
     <div className="App">
-      <h1>Demo</h1>
+      <h1>Gateway Reference Implementation</h1>
       <div className="card">
-        <p>
-          Make a request to the server
-          <button onClick={() => getFromServer()}>
-            fromServer is {fromServer}
-          </button>
-        </p>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      
+        <button onClick={() => createData()}>make a data</button>
+        <p>the data: {data}</p>
+        <p>the data's id: {dataId}</p>
+      </div>
+      <div>
+        <p>total datas: {dataCount}</p>
       </div>
     </div>
   )
