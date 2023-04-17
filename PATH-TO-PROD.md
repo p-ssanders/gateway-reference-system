@@ -1,6 +1,6 @@
 #   Path to Production on Public Cloud Kubernetes Exercise
 
-Given the topology of this reference artifact, what would a path to production look like?
+Given the topology of the reference system, what would a path to production look like?
 
 Implement a simple "Hello World" path to production, after which you will be expected to:
 -   Demonstrate the running application on a public cloud kubernetes cluster
