@@ -4,8 +4,13 @@ metadata:
   name: gateway
   namespace: gateway-reference
   annotations:
-    kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: lets-encrypt-prod
 spec:
+  tls:
+  - hosts:
+      - gateway.eks.samsanders.dev
+    secretName: ingress-cert
   rules:
   - host: gateway.eks.samsanders.dev
     http:

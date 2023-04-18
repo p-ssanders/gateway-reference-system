@@ -12,3 +12,4 @@ This directory contains kubernetes manifests to deploy the gateway reference sys
 ##  Cluster Services
 
 -   [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
+-   [cert-manager](https://cert-manager.io/docs/installation/helm/)
