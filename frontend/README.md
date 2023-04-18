@@ -23,6 +23,7 @@ It happens to be built with [Vite](https://vitejs.dev/), but it doesn't really m
                           --env BP_NODE_RUN_SCRIPTS=build \
                           --env BP_WEB_SERVER=nginx \
                           --env BP_WEB_SERVER_ROOT=dist
+                          --env BP_NGINX_STUB_STATUS_PORT=8081
 
 ##  Run Image
 

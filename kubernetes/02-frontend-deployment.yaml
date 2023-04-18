@@ -32,3 +32,13 @@ spec:
           limits:
             memory: 1G
             cpu: 1
+        livenessProbe:
+          httpGet:
+            path: /stub_status
+            port: 8081
+            scheme: HTTP
+        readinessProbe:
+          httpGet:
+            path: /stub_status
+            port: 8081
+            scheme: HTTP
