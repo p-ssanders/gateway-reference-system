@@ -2,6 +2,9 @@ management:
   endpoint:
     health:
       show-details: always
+      probes:
+        enabled: true
+        add-additional-paths: true
   endpoints:
     web:
       exposure:
