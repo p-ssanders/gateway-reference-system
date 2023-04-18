@@ -29,3 +29,13 @@ spec:
           limits:
             memory: 1G
             cpu: 1
+        livenessProbe:
+          httpGet:
+            path: /livez
+            port: 8080
+            scheme: HTTP
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 8080
+            scheme: HTTP
