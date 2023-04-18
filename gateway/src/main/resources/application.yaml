@@ -1,4 +1,3 @@
-debug: true
 spring:
   cloud:
     gateway:
@@ -14,7 +13,17 @@ spring:
         predicates:
         - Path=/**
 management:
+  server:
+    port: 8081
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+        add-additional-paths: true
   endpoints:
     web:
       exposure:
-        include: gateway
+        include:
+          - health
+          - gateway
