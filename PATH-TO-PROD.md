@@ -37,6 +37,7 @@ Note all the decisions that are made along the way for a single pass along a ver
 -   How did you deploy services?
     -   How did you provide the service connection information to the system components?
     -   How did you manage secrets like credentials?
+    -   How did you manage storage for a database?
 -   How did you access the system?
     -   What was required to get this working?
 
