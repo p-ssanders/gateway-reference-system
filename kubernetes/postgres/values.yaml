@@ -1,0 +1,11 @@
+global:
+  postgresql:
+    auth:
+      postgresPassword: "admin"
+      username: "backend"
+      password: "backend"
+      database: "backend"
+serviceBindings:
+  # this almost works, but the generated secret needs to have the `user` key renamed to username
+  # https://github.com/bitnami/charts/issues/16145
+  enabled: true

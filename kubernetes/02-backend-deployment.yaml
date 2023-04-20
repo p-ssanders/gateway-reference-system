@@ -39,3 +39,14 @@ spec:
             path: /readyz
             port: 8080
             scheme: HTTP
+        env:
+          - name: SERVICE_BINDING_ROOT
+            value: "/bindings"
+        volumeMounts:
+          - name: postgresql-secret
+            mountPath: "/bindings/postgres"
+            readOnly: true
+      volumes:
+        - name: postgresql-secret
+          secret:
+            secretName: postgresql-svcbind-custom-user
