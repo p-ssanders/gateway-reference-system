@@ -27,4 +27,4 @@ The data can be stored in H2 or PostgreSQL.
 
 ##  Run Image
 
-    docker run -p 8081:8081 backend:0.0.1-SNAPSHOT --server.port=8081
+    docker run -p 8081:8081 -e SPRING_PROFILES_ACTIVE=local -e SYSTEM_HOSTNAME=host.docker.internal backend:0.0.1-SNAPSHOT --server.port=8081
