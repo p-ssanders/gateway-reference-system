@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ssanders0/ptp-frontend:0.0.1-SNAPSHOT
+        image: ssanders0/ptp-frontend@sha256:1207f89a25ddd7f8cc5554469e5d4d48f82e18614e1460b41506766f263d782f
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

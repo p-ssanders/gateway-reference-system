@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ssanders0/ptp-backend:0.0.1-SNAPSHOT
+        image: ssanders0/ptp-backend@sha256:db18bc8edbaf398db1c7373591f94547fde67b38c52f9e386565796fc8ee9f8c
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

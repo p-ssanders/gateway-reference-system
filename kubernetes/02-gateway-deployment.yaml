@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: gateway
-        image: ssanders0/ptp-gateway:0.0.1-SNAPSHOT
+        image: ssanders0/ptp-gateway@sha256:4b3a6f72be7b404d1ad456ba3e3d5bdf866f36d64bac766facb122f6d875ca67
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
