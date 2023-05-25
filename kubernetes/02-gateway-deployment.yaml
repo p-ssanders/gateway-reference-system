@@ -42,6 +42,8 @@ spec:
         env:
           - name: SPRING_PROFILES_ACTIVE
             value: cloud
+          - name:  MANAGEMENT_SERVER_PORT
+            value: "8081"
         volumeMounts:
           - name: spring-config
             mountPath: "/workspace/config"
