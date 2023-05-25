@@ -5,7 +5,7 @@ Given the topology of the reference system, what would a path to production look
 Implement a simple "Hello World" path to production on a public cloud provider (AWS, GCP, Azure) so that you can:
 
 -   Demonstrate the running system
--   Demonstrate the steps you took to get the application running there by, for exampe, rolling out a change
+-   Demonstrate the steps you took to get the application running there by, for example, rolling out a change
 -   Discuss the decisions you made, the tradeoffs you accepted, and the challenges you faced
 
 ##  The "Hello World" Path to Production
