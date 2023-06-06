@@ -1,3 +1,7 @@
+[![Backend Build](https://github.com/p-ssanders/gateway-reference-system/actions/workflows/backend.yml/badge.svg)](https://github.com/p-ssanders/gateway-reference-system/actions/workflows/backend.yml)
+[![Frontend Build](https://github.com/p-ssanders/gateway-reference-system/actions/workflows/frontend.yml/badge.svg)](https://github.com/p-ssanders/gateway-reference-system/actions/workflows/frontend.yml)
+[![Gateway Build](https://github.com/p-ssanders/gateway-reference-system/actions/workflows/gateway.yml/badge.svg)](https://github.com/p-ssanders/gateway-reference-system/actions/workflows/gateway.yml)
+
 ##  Gateway Reference System
 
 Many systems consist of a "backend" which provides data storage and lookup via API, and a "frontend" which allows a human user to interact with the backend.
@@ -18,5 +22,3 @@ These applications comprise a system, and can run locally, in docker, or on kube
 -   Deploying multiple artifacts
 -   Integrating the deployed artifacts
 -   Deploying a database
-
-See the [Path to Production on Public Cloud Kubernetes Exercise](./PATH-TO-PROD.md) document for more details.
