@@ -1,4 +1,4 @@
-name: Backend Build
+name: Gateway Build
 
 on:
   push:
@@ -19,6 +19,6 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Build Backend
-      working-directory: backend
-      run: ./gradlew build
+    - name: Build Gateway
+      working-directory: gateway
+      run: ./mvnw package
