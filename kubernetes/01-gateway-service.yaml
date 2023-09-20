@@ -5,6 +5,8 @@ metadata:
   namespace: gateway-reference
   labels:
     app: gateway
+  annotations:
+    alb.ingress.kubernetes.io/target-type: ip
 spec:
   selector:
     app: gateway

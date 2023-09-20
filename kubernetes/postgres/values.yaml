@@ -1,3 +1,4 @@
+# helm install backend-pgsql oci://registry-1.docker.io/bitnamicharts/postgresql -n gateway-reference -f postgres/values.yaml
 global:
   postgresql:
     auth:
